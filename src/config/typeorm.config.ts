@@ -9,7 +9,7 @@ console.log(
     ' ' +
     process.env.TASKS_DB_USERNAME +
     ' ' +
-    process.env.TASKS_DB_PASSWORD +
+    process.env.TASKS_DB_PW +
     ' ' +
     process.env.TASKS_DB_DB_NAME +
     ' ' +
@@ -21,7 +21,7 @@ export const typeOrmConfig: TypeOrmModuleOptions = {
   host: process.env.TASKS_DB_HOSTNAME || dbConfig.host,
   port: process.env.TASKS_DB_PORT || dbConfig.port,
   username: process.env.TASKS_DB_USERNAME || dbConfig.username,
-  password: process.env.TASKS_DB_PASSWORD || dbConfig.password,
+  password: process.env.TASKS_DB_PW || dbConfig.password,
   database: process.env.TASKS_DB_DB_NAME || dbConfig.database,
   entities: [__dirname + '/../**/*.entity.{js,ts}'],
   synchronize: process.env.TASKS_TYPEORM_SYNC || dbConfig.synchronize,
