@@ -2,7 +2,19 @@ import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 import * as config from 'config';
 const dbConfig = config.get('db');
 
-console.log(process.env);
+console.log(
+  process.env.TASKS_DB_HOSTNAME +
+    ' ' +
+    process.env.TASKS_DB_PORT +
+    ' ' +
+    process.env.TASKS_DB_USERNAME +
+    ' ' +
+    process.env.TASKS_DB_PASSWORD +
+    ' ' +
+    process.env.TASKS_DB_DB_NAME +
+    ' ' +
+    process.env.TASKS_TYPEORM_SYNC,
+);
 
 export const typeOrmConfig: TypeOrmModuleOptions = {
   type: dbConfig.type,
