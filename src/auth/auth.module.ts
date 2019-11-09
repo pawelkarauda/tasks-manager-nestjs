@@ -9,7 +9,6 @@ import { JwtStrategy } from './jwt.strategy';
 import * as config from 'config';
 
 const jwtConfig = config.get('jwt');
-console.log(process.env.TASKS_JWT_SECRET);
 
 @Module({
   imports: [
