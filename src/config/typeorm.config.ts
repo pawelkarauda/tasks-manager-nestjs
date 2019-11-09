@@ -6,11 +6,11 @@ console.log(process.env);
 
 export const typeOrmConfig: TypeOrmModuleOptions = {
   type: dbConfig.type,
-  host: process.env.DB_HOSTNAME || dbConfig.host,
-  port: process.env.DB_PORT || dbConfig.port,
-  username: process.env.DB_USERNAME || dbConfig.username,
-  password: process.env.DB_PASSWORD || dbConfig.password,
-  database: process.env.DB_DB_NAME || dbConfig.database,
+  host: process.env.TASKS_DB_HOSTNAME || dbConfig.host,
+  port: process.env.TASKS_DB_PORT || dbConfig.port,
+  username: process.env.TASKS_DB_USERNAME || dbConfig.username,
+  password: process.env.TASKS_DB_PASSWORD || dbConfig.password,
+  database: process.env.TASKS_DB_DB_NAME || dbConfig.database,
   entities: [__dirname + '/../**/*.entity.{js,ts}'],
-  synchronize: process.env.TYPEORM_SYNC || dbConfig.synchronize,
+  synchronize: process.env.TASKS_TYPEORM_SYNC || dbConfig.synchronize,
 };
