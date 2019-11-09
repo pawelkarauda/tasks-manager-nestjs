@@ -7,6 +7,8 @@ import { UserRepository } from './user.repository';
 import { User } from './user.entity';
 import * as config from 'config';
 
+console.log(process.env.TASKS_JWT_SECRET);
+
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {
   constructor(
