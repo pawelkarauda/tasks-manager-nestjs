@@ -8,9 +8,10 @@
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
+    "postinstall": "npm run prestart:prod",
+    "start:prod": "node dist/main.js",
     "start:dev": "NODE_ENV=development nest start --watch",
     "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main",
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -42,7 +43,6 @@
     "ts-node": "^8.4.1",
     "typeorm": "^0.2.20",
     "typescript": "^3.6.3"
-
   },
   "devDependencies": {
     "@nestjs/cli": "^6.9.0",
